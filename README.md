@@ -1,3 +1,15 @@
+Для запуска использовать:
+1) mvn spring-boot:run
+2) dockСобрать проект в docker:
+   docker build -t test_task .
+   docker run -p 8080:8080 test_task
+3) Скачать готовый образ:
+   docker pull shooropp/test_task_one:latest
+   docker run -p 8080:8080 shooropp/test_task_one:latest
+
+swagger UI http://localhost:8080/swagger-ui/index.html
+API POST http://localhost:8080/v1/getMaxNumber
+
 Тестовое задание - написать на Java\Spring (любых версий) сервис:
 1. Должен быть доступен сваггер
 2. В сваггере единственный контроллер с единственным методом
