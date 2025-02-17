@@ -28,7 +28,7 @@ public class MainService {
         try {
             Map<Integer, List<String>> sheetData = XlsxUtil.getSheetData(file.getInputStream());
             List<Integer> arrayAllNumbers = XlsxUtil.getArrayAllNumbers(sheetData);
-            List<Integer> sortingNumbers = SortingUtil.sortingArrayNumber(arrayAllNumbers);
+            List<Integer> sortingNumbers = SortingUtil.mergeSort(arrayAllNumbers);
 
             if (Objects.isNull(serialNumber)) {
                 int position = 0;
