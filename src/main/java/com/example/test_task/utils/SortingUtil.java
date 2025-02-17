@@ -2,10 +2,13 @@ package com.example.test_task.utils;
 
 import com.example.test_task.exception.TestTaskException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SortingUtil {
 
-    public static int[] sortingArrayNumber(int[] array) throws TestTaskException {
+    public static List<Integer> sortingArrayNumber(List<Integer> array) throws TestTaskException {
 
-        return new int[0];
+        return new ArrayList<>(array);
     }
 }

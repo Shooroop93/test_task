@@ -5,7 +5,6 @@ import com.example.test_task.dto.TestTaskResponseDTO;
 import com.example.test_task.service.MainService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,7 +28,7 @@ public class MainController {
             return ResponseEntity.status(response.getStatusCode()).body(response);
         }
 
-        TestTaskResponseDTO response = mainService.getMaxNumber(file, serialNumber);
+        TestTaskResponseDTO response = mainService.getMaxNumberForXlsxFile(file, serialNumber);
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
 }
